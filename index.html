@@ -8,12 +8,44 @@
 <link rel="stylesheet" href="site_overwatch/main.css">
     <title>Primeiro Projeto</title>
 </head>
+<script>
+  function handleChangeSlideMenu(event, index) {
+    event.preventDefault();
+    const d1 = document.getElementById('d1');
+    const d2 = document.getElementById('d2');
+    const d3 = document.getElementById('d3');
+    const d4 = document.getElementById('d4');
+    const d5 = document.getElementById('d5');
+    if (index == 1) {
+      d1.src = 'https://www.infobooks.org/wp-content/uploads/2023/08/cloud-computing-books-1.webp';
+      d2.src = './img/Captura de tela de 2024-11-19 16-45-07.png';
+      d3.src = '/img/Captura de tela de 2024-11-19 16-58-38.png'
+      d4.src = './img/Captura de tela de 2024-11-19 16-59-52.png'
+      d5.src = './img/Captura de tela de 2024-11-19 16-46-47.png'
+      $('.slide-principal').slick('slickGoTo', 0);
+
+    } else {
+      d1.src = 'https://www.clipartkey.com/mpngs/m/21-213643_integrantes-de-un-grupo.png';
+      d2.src = './img/Captura de tela de 2024-11-19 16-30-18.png';
+      d3.src = './img/Captura de tela de 2024-11-19 16-17-00.png'
+      d4.src = './img/Captura de tela de 2024-11-19 16-34-11.png'
+      d5.src = './img/Captura de tela de 2024-11-19 16-35-28.png'
+      $('.slide-principal').slick('slickGoTo', 0);
+    }
+
+  }
+</script>
 <body>
    <header class="menu-principal">
      <main>
        <div class="header-1">
           <div class="logo">
-            <img width="180"  src="https://templatepocket.com/wp-content/uploads/2019/12/overwatch-4.png" alt="">
+            <h2 style="margin-left: -400px; margin-top: -8px;">Cloud Computing</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" width="66" height="66" style="position: relative; top: -3px; left: -360px">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+            </svg>
+            
+            
           </div>
           <div class="redes-sociais">
             <ul>
@@ -31,75 +63,54 @@
     <div class="header-2">
         <div class="menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About us</a></li>
+                <li onclick="handleChangeSlideMenu(event, 1)"><a href="">Home</a></li>
+                <li onclick="handleChangeSlideMenu(event, 2)"><a href="">About us</a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">Pages</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Contat us</a></li>
             </ul>
         </div>
-        <div class="busca">
-             <input style="border-radius: 8%;" placeholder="search something" type="text">
-        </div>
     </div>
   </main>
   
     <div class="slide-principal">
-        <div><img height="450px"  width="1865px" src="https://images.hdqwalls.com/download/overwatch-2-game-heroes-4k-ee-2560x1080.jpg"></div>
-        <div><img height="450px"  width="1865px" src="https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_titanfall_2_01_2560x1080.jpg&height=506&sharpen"></div>
-        <div><img height="450px"  width="1865px" src="https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_battlefield_1_02_2560x1080.jpg&height=506&sharpen"></div>
-        <div><img height="450px"  width="1865px" src="https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_for_honor_12_2560x1080.jpg&height=506&sharpen"></div>
+        <div><img id="d1" style="border: 3px solid #41d459; margin-left: 350px;" height="800px"  width="1265px" src="https://www.infobooks.org/wp-content/uploads/2023/08/cloud-computing-books-1.webp"></div>
+        <div ><img id="d2" style="border: 3px solid #41d459; margin-left: 350px;" height="800px"  width="1265px" src="./img/Captura de tela de 2024-11-19 16-45-07.png"></div>
+        <div><img  id="d3" style="border: 3px solid #41d459; margin-left: 350px;" height="800px"  width="1265px" src="./img/Captura de tela de 2024-11-19 16-58-38.png"></div>
+        <div><img id="d4" style="border: 3px solid #41d459; margin-left: 350px;" height="800px"  width="1265px" src="/img/Captura de tela de 2024-11-19 16-59-52.png"></div>
+        <div><img id="d5" style="border: 3px solid #41d459; margin-left: 350px;" height="800px"  width="1265px" src="./img/Captura de tela de 2024-11-19 16-46-47.png"></div>
      </div>
-     <div class="content">
-           <h1>Descubra novas formas de jogar</h1>
-           <p>Essa é uma plataforma destinada aos jogos que estão caindo no esqueciemnto e abandono,
-            aqui você encontrará pessoas com os mesmos jogos em comum e será capaz de interagir
-            com elas, criando grupos e servidores inteiros naquele game que você parou de jogar há anos
-             por falta de players CU.
+     <div style="margin-top: 50px;" class="content">
+           <h1>Descubra novas formas de Programar</h1>
+           <p id="text">A computação em nuvem beneficia o meio ambiente ao reduzir o consumo de energia e a produção de lixo eletrônico, graças à infraestrutura compartilhada e eficiente dos data centers. Muitos provedores utilizam fontes de energia renovável, diminuindo a pegada de carbono. Além disso, a alocação sob demanda evita desperdícios e elimina a necessidade de grandes investimentos em servidores físicos. Empresas também se beneficiam de maior escalabilidade, segurança e economia, promovendo inovação. Assim, a nuvem combina eficiência tecnológica com sustentabilidade ambiental.
            </p>
-           <div class="col-3">
-<a href="Formulario.html" target="_self"><img width="190px" src="https://spi.unb.br/images/adicionar-simbolo-cartao-de-visita_318-63636.jpg"/></a>              <h3>Perfil de cadastro</h3>
-              <p>Se cadastre aqui para que outros jogadores possam acessar seu perfil</p>
-           </div>
-           <div class="col-3">
-            <img style="margin-top: 50px;" width="190px"  src="https://static.vecteezy.com/ti/vetor-gratis/p1/643326-icone-de-pessoas-do-grupo-gratis-vetor.jpg"/> 
-             <h3>Seus grupos</h3>
-             <p>Acesse seu grupo de games e adicione novos</p>
-         
-           </div>
-           <div class="col-3">
-            <img style="margin-top: 27px;" width="190px" src="https://www.pngitem.com/pimgs/m/612-6127701_chatting-icon-icones-de-conversa-hd-png-download.png"/> 
-             <h3>Chat online</h3>
-             <p>Convide e converse com seus amigos</p>
-
-           </div>
                                                          
        </div>
        <header class="content-21">
        <div class="col-5">
-        <img width="399px" src="https://c4.wallpaperflare.com/wallpaper/358/477/298/video-games-titanfall-titanfall-2-wallpaper-preview.jpg" alt="">
-        <p>Titanfall é um jogo FPS coperativo com uma grande variedade de modos e mapas, principal diferencial do game é a possibilidade de usar titãs em combate.</p>
+        <img width="399px" height="300px" src="https://dropeclothing.com/resources/img/eco-footprint-sustainability/eco-footprint-sustainability.png" alt="">
+        <p>A computação em nuvem promove sustentabilidade ao reduzir a infraestrutura física, o consumo de energia e os resíduos eletrônicos, além de utilizar fontes renováveis em data centers.</p>
 
        </div>
         <div class="col-5">
-          <img width="399px" src="https://image.winudf.com/v2/image/b3ZlcndhdGNoLndhbGxwYXBlci5oZF9zY3JlZW5fMF8xNTI3MDQ0MjA3XzA0OA/screen-0.jpg?fakeurl=1&type=.webp" alt="">
-        <p>Overwatch é um jogo online e gratuito que mistura elementos de FPS com personagens tipicos de um MMO, seu objetivo é captutar o ponto num combate 5x5.</p>
+          <img width="399px" height="300px" src="https://www.fm2s.com.br/storage/blog/images/custo-beneficio.webp" alt="">
+        <p>A computação em nuvem oferece ótimo custo-benefício, permitindo que empresas paguem apenas pelos recursos utilizados. Ela elimina custos com infraestrutura e manutenção, proporcionando flexibilidade e escalabilidade.</p>
 
         </div>
         <div class="col-5">
-          <img width="399px" height="243px" src="https://wallpaperaccess.com/full/93088.jpg" alt="">
-        <p>Escolha entre as facções dos samurais, cavaleiros ou vikings e trave guerras por todo o mundo em busca da supremacia do seu povo.</p>
+          <img width="399px" height="300px" src="https://cdn.hospedagemdesit.es/wp/wp-content/uploads/2021/05/computacao-em-nuvem.jpg" alt="">
+        <p>A computação em nuvem melhora o desempenho ao utilizar servidores poderosos e escaláveis, oferecendo maior velocidade e eficiência no processamento de dados do que um servidor convencional.</p>
 
       </div>
       <div class="col-5">
-        <img width="399px" src="https://store-images.s-microsoft.com/image/apps.11030.71723728477894721.ccae3323-9805-41d3-ae50-dc82948a7d7f.553b97e6-4d70-46b2-83db-ceb07c5f8f5a?q=90&w=480&h=270" alt="">
-      <p>Ambientado na primeira guerra mundial, battlefield é um FPS realista que busca a imersão do combate, trazendo cenários reais das principais batalhas.  </p>
+        <img width="399px" height="300px" src="https://img.freepik.com/fotos-gratis/3d-morph-man-builder-com-chave-inglesa_1048-14179.jpg" alt="">
+      <p>A computação em nuvem simplifica a manutenção ao centralizar recursos e atualizações, permitindo que as empresas se concentrem nas operações sem se preocupar com a infraestrutura.</p>
 
     </div>  
   
    </header>  
-   <footer style="color: #e49a10;">
+   <footer style="color: #41d459;">
     <div style="background-color: #262728;" class="Col-9">
       <div class="content">
         
@@ -116,7 +127,7 @@
 
     </div>
    </footer> 
-   <div style="background-color: #ff7b00;" class="col-90">
+   <div style="background-color: #41d459;" class="col-90">
     <div class="content-9">
         <h4> Na ativa desde 1322</h4>
     </div>
