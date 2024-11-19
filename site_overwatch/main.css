@@ -174,14 +174,17 @@ li.slick-active button{
     
 }
 
-
-.content h1{
-    margin-left: 37%;
-    
+.content {
+    margin-top: 110px !important;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 30%;
 }
 .content p{
-     margin-left: 30%;
-     margin-right: 30%;
      font-size: medium;
      text-align: center;
 }
