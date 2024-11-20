@@ -9,6 +9,24 @@
     <title>Cloud Computing</title>
 </head>
 <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Verifica se o dispositivo é mobile
+  const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+
+  if (isMobile) {
+    // Substituir o conteúdo da página com a mensagem
+    document.body.innerHTML = `
+      <div style="text-align: center; padding: 20px; font-family: Arial, sans-serif;">
+        <h1>Este site não é compatível com dispositivos móveis.</h1>
+        <p>Por favor, acesse este site em um computador desktop.</p>
+      </div>
+    `;
+  }
+});
+
   function handleChangeSlideMenu(event, index) {
     event.preventDefault();
     const d1 = document.getElementById('d1');
